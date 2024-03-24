@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5A7DEFC2BB09EEC0092D436 /* upworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DEFB2BB09EEC0092D436 /* upworkApp.swift */; };
+		F5A7DEFE2BB09EEC0092D436 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DEFD2BB09EEC0092D436 /* ContentView.swift */; };
+		F5A7DF002BB09EF20092D436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A7DEFF2BB09EF20092D436 /* Assets.xcassets */; };
+		F5A7DF032BB09EF20092D436 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A7DF022BB09EF20092D436 /* Preview Assets.xcassets */; };
+		F5A7DF0D2BB09EF30092D436 /* upworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DF0C2BB09EF30092D436 /* upworkTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5A7DF092BB09EF30092D436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5A7DEF02BB09EEB0092D436 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5A7DEF72BB09EEB0092D436;
+			remoteInfo = upwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5A7DEF82BB09EEC0092D436 /* upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A7DEFB2BB09EEC0092D436 /* upworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upworkApp.swift; sourceTree = "<group>"; };
+		F5A7DEFD2BB09EEC0092D436 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5A7DEFF2BB09EF20092D436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5A7DF022BB09EF20092D436 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5A7DF082BB09EF30092D436 /* upworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = upworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A7DF0C2BB09EF30092D436 /* upworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upworkTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5A7DEF52BB09EEB0092D436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A7DF052BB09EF30092D436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5A7DEEF2BB09EEB0092D436 = {
+			isa = PBXGroup;
+			children = (
+				F5A7DEFA2BB09EEC0092D436 /* upwork */,
+				F5A7DF0B2BB09EF30092D436 /* upworkTests */,
+				F5A7DEF92BB09EEC0092D436 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5A7DEF92BB09EEC0092D436 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7DEF82BB09EEC0092D436 /* upwork.app */,
+				F5A7DF082BB09EF30092D436 /* upworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5A7DEFA2BB09EEC0092D436 /* upwork */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7DEFB2BB09EEC0092D436 /* upworkApp.swift */,
+				F5A7DEFD2BB09EEC0092D436 /* ContentView.swift */,
+				F5A7DEFF2BB09EF20092D436 /* Assets.xcassets */,
+				F5A7DF012BB09EF20092D436 /* Preview Content */,
+			);
+			path = upwork;
+			sourceTree = "<group>";
+		};
+		F5A7DF012BB09EF20092D436 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7DF022BB09EF20092D436 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5A7DF0B2BB09EF30092D436 /* upworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7DF0C2BB09EF30092D436 /* upworkTests.swift */,
+			);
+			path = upworkTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5A7DEF72BB09EEB0092D436 /* upwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upwork" */;
+			buildPhases = (
+				F5A7DEF42BB09EEB0092D436 /* Sources */,
+				F5A7DEF52BB09EEB0092D436 /* Frameworks */,
+				F5A7DEF62BB09EEB0092D436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = upwork;
+			productName = upwork;
+			productReference = F5A7DEF82BB09EEC0092D436 /* upwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5A7DF072BB09EF30092D436 /* upworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A7DF1F2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upworkTests" */;
+			buildPhases = (
+				F5A7DF042BB09EF30092D436 /* Sources */,
+				F5A7DF052BB09EF30092D436 /* Frameworks */,
+				F5A7DF062BB09EF30092D436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5A7DF0A2BB09EF30092D436 /* PBXTargetDependency */,
+			);
+			name = upworkTests;
+			productName = upworkTests;
+			productReference = F5A7DF082BB09EF30092D436 /* upworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5A7DEF02BB09EEB0092D436 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					F5A7DEF72BB09EEB0092D436 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					F5A7DF072BB09EF30092D436 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = F5A7DEF72BB09EEB0092D436;
+					};
+				};
+			};
+			buildConfigurationList = F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "upwork" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5A7DEEF2BB09EEB0092D436;
+			productRefGroup = F5A7DEF92BB09EEC0092D436 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5A7DEF72BB09EEB0092D436 /* upwork */,
+				F5A7DF072BB09EF30092D436 /* upworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5A7DEF62BB09EEB0092D436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7DF032BB09EF20092D436 /* Preview Assets.xcassets in Resources */,
+				F5A7DF002BB09EF20092D436 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A7DF062BB09EF30092D436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5A7DEF42BB09EEB0092D436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7DEFE2BB09EEC0092D436 /* ContentView.swift in Sources */,
+				F5A7DEFC2BB09EEC0092D436 /* upworkApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A7DF042BB09EF30092D436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7DF0D2BB09EF30092D436 /* upworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5A7DF0A2BB09EF30092D436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5A7DEF72BB09EEB0092D436 /* upwork */;
+			targetProxy = F5A7DF092BB09EF30092D436 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F5A7DF1A2BB09EF30092D436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5A7DF1B2BB09EF30092D436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5A7DF1D2BB09EF30092D436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"upwork/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amr.upwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5A7DF1E2BB09EF30092D436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"upwork/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amr.upwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5A7DF202BB09EF30092D436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amr.upworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/upwork.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/upwork";
+			};
+			name = Debug;
+		};
+		F5A7DF212BB09EF30092D436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amr.upworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/upwork.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/upwork";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "upwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A7DF1A2BB09EF30092D436 /* Debug */,
+				F5A7DF1B2BB09EF30092D436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A7DF1D2BB09EF30092D436 /* Debug */,
+				F5A7DF1E2BB09EF30092D436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A7DF1F2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A7DF202BB09EF30092D436 /* Debug */,
+				F5A7DF212BB09EF30092D436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5A7DEF02BB09EEB0092D436 /* Project object */;
+}
