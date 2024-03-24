@@ -16,6 +16,9 @@
 		F555A65C2BB0B0D000B88DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F555A6522BB0B0D000B88DD5 /* Assets.xcassets */; };
 		F555A65D2BB0B0D000B88DD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6532BB0B0D000B88DD5 /* ContentView.swift */; };
 		F555A65E2BB0B0D000B88DD5 /* UpworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */; };
+		F555A6612BB0B38D00B88DD5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A65F2BB0B38C00B88DD5 /* Tab.swift */; };
+		F555A6632BB0B48700B88DD5 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6622BB0B48700B88DD5 /* TabsView.swift */; };
+		F555A6652BB0B89F00B88DD5 /* MarketTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */; };
 		F5A7DF0D2BB09EF30092D436 /* UpworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DF0C2BB09EF30092D436 /* UpworkTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		F555A6522BB0B0D000B88DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F555A6532BB0B0D000B88DD5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkApp.swift; sourceTree = "<group>"; };
+		F555A65F2BB0B38C00B88DD5 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		F555A6622BB0B48700B88DD5 /* TabsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTabView.swift; sourceTree = "<group>"; };
 		F5A7DEF82BB09EEC0092D436 /* Upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A7DF082BB09EF30092D436 /* UpworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A7DF0C2BB09EF30092D436 /* UpworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkTests.swift; sourceTree = "<group>"; };
@@ -68,8 +74,10 @@
 				F555A6492BB0B0D000B88DD5 /* ComplexView.swift */,
 				F555A64A2BB0B0D000B88DD5 /* CustomToolbar.swift */,
 				F555A64B2BB0B0D000B88DD5 /* ListView.swift */,
+				F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */,
 				F555A64C2BB0B0D000B88DD5 /* NewCustomToolbar.swift */,
 				F555A64D2BB0B0D000B88DD5 /* NewView.swift */,
+				F555A6622BB0B48700B88DD5 /* TabsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -77,6 +85,7 @@
 		F555A64F2BB0B0D000B88DD5 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				F555A6602BB0B38C00B88DD5 /* Models */,
 				F555A64E2BB0B0D000B88DD5 /* Views */,
 			);
 			path = Market;
@@ -93,13 +102,21 @@
 		F555A6552BB0B0D000B88DD5 /* Upwork */ = {
 			isa = PBXGroup;
 			children = (
+				F555A6532BB0B0D000B88DD5 /* ContentView.swift */,
 				F555A64F2BB0B0D000B88DD5 /* Market */,
 				F555A6512BB0B0D000B88DD5 /* Preview Content */,
 				F555A6522BB0B0D000B88DD5 /* Assets.xcassets */,
-				F555A6532BB0B0D000B88DD5 /* ContentView.swift */,
 				F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */,
 			);
 			path = Upwork;
+			sourceTree = "<group>";
+		};
+		F555A6602BB0B38C00B88DD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F555A65F2BB0B38C00B88DD5 /* Tab.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F5A7DEEF2BB09EEB0092D436 = {
@@ -230,9 +247,12 @@
 			files = (
 				F555A6572BB0B0D000B88DD5 /* CustomToolbar.swift in Sources */,
 				F555A65E2BB0B0D000B88DD5 /* UpworkApp.swift in Sources */,
+				F555A6652BB0B89F00B88DD5 /* MarketTabView.swift in Sources */,
 				F555A6592BB0B0D000B88DD5 /* NewCustomToolbar.swift in Sources */,
+				F555A6612BB0B38D00B88DD5 /* Tab.swift in Sources */,
 				F555A65D2BB0B0D000B88DD5 /* ContentView.swift in Sources */,
 				F555A6562BB0B0D000B88DD5 /* ComplexView.swift in Sources */,
+				F555A6632BB0B48700B88DD5 /* TabsView.swift in Sources */,
 				F555A65A2BB0B0D000B88DD5 /* NewView.swift in Sources */,
 				F555A6582BB0B0D000B88DD5 /* ListView.swift in Sources */,
 			);

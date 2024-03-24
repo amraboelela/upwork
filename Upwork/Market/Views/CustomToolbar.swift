@@ -1,6 +1,6 @@
 //
 //  CustomToolbar.swift
-//  market
+//  Market
 //
 //  Created by Amr Aboelela on 3/24/24.
 //
@@ -25,7 +25,7 @@ struct CustomToolbar<LeftContent: View, CenterContent: View, RightContent: View>
                 .padding()
         }
         .background(Color.white)
-        .edgesIgnoringSafeArea(.top)
+        //.edgesIgnoringSafeArea(.top)
     }
 }
 
