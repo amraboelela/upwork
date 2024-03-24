@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F5A7DEFC2BB09EEC0092D436 /* upworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DEFB2BB09EEC0092D436 /* upworkApp.swift */; };
-		F5A7DEFE2BB09EEC0092D436 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DEFD2BB09EEC0092D436 /* ContentView.swift */; };
-		F5A7DF002BB09EF20092D436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A7DEFF2BB09EF20092D436 /* Assets.xcassets */; };
-		F5A7DF032BB09EF20092D436 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A7DF022BB09EF20092D436 /* Preview Assets.xcassets */; };
-		F5A7DF0D2BB09EF30092D436 /* upworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DF0C2BB09EF30092D436 /* upworkTests.swift */; };
+		F555A6562BB0B0D000B88DD5 /* ComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6492BB0B0D000B88DD5 /* ComplexView.swift */; };
+		F555A6572BB0B0D000B88DD5 /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A64A2BB0B0D000B88DD5 /* CustomToolbar.swift */; };
+		F555A6582BB0B0D000B88DD5 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A64B2BB0B0D000B88DD5 /* ListView.swift */; };
+		F555A6592BB0B0D000B88DD5 /* NewCustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A64C2BB0B0D000B88DD5 /* NewCustomToolbar.swift */; };
+		F555A65A2BB0B0D000B88DD5 /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A64D2BB0B0D000B88DD5 /* NewView.swift */; };
+		F555A65B2BB0B0D000B88DD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F555A6502BB0B0D000B88DD5 /* Preview Assets.xcassets */; };
+		F555A65C2BB0B0D000B88DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F555A6522BB0B0D000B88DD5 /* Assets.xcassets */; };
+		F555A65D2BB0B0D000B88DD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6532BB0B0D000B88DD5 /* ContentView.swift */; };
+		F555A65E2BB0B0D000B88DD5 /* UpworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */; };
+		F5A7DF0D2BB09EF30092D436 /* UpworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DF0C2BB09EF30092D436 /* UpworkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F5A7DEF82BB09EEC0092D436 /* upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5A7DEFB2BB09EEC0092D436 /* upworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upworkApp.swift; sourceTree = "<group>"; };
-		F5A7DEFD2BB09EEC0092D436 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F5A7DEFF2BB09EF20092D436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F5A7DF022BB09EF20092D436 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F5A7DF082BB09EF30092D436 /* upworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = upworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5A7DF0C2BB09EF30092D436 /* upworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upworkTests.swift; sourceTree = "<group>"; };
+		F555A6492BB0B0D000B88DD5 /* ComplexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexView.swift; sourceTree = "<group>"; };
+		F555A64A2BB0B0D000B88DD5 /* CustomToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
+		F555A64B2BB0B0D000B88DD5 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		F555A64C2BB0B0D000B88DD5 /* NewCustomToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCustomToolbar.swift; sourceTree = "<group>"; };
+		F555A64D2BB0B0D000B88DD5 /* NewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
+		F555A6502BB0B0D000B88DD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F555A6522BB0B0D000B88DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F555A6532BB0B0D000B88DD5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkApp.swift; sourceTree = "<group>"; };
+		F5A7DEF82BB09EEC0092D436 /* Upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A7DF082BB09EF30092D436 /* UpworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A7DF0C2BB09EF30092D436 /* UpworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +62,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F555A64E2BB0B0D000B88DD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F555A6492BB0B0D000B88DD5 /* ComplexView.swift */,
+				F555A64A2BB0B0D000B88DD5 /* CustomToolbar.swift */,
+				F555A64B2BB0B0D000B88DD5 /* ListView.swift */,
+				F555A64C2BB0B0D000B88DD5 /* NewCustomToolbar.swift */,
+				F555A64D2BB0B0D000B88DD5 /* NewView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F555A64F2BB0B0D000B88DD5 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				F555A64E2BB0B0D000B88DD5 /* Views */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		F555A6512BB0B0D000B88DD5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F555A6502BB0B0D000B88DD5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F555A6552BB0B0D000B88DD5 /* Upwork */ = {
+			isa = PBXGroup;
+			children = (
+				F555A64F2BB0B0D000B88DD5 /* Market */,
+				F555A6512BB0B0D000B88DD5 /* Preview Content */,
+				F555A6522BB0B0D000B88DD5 /* Assets.xcassets */,
+				F555A6532BB0B0D000B88DD5 /* ContentView.swift */,
+				F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */,
+			);
+			path = Upwork;
+			sourceTree = "<group>";
+		};
 		F5A7DEEF2BB09EEB0092D436 = {
 			isa = PBXGroup;
 			children = (
-				F5A7DEFA2BB09EEC0092D436 /* upwork */,
-				F5A7DF0B2BB09EF30092D436 /* upworkTests */,
+				F555A6552BB0B0D000B88DD5 /* Upwork */,
+				F5A7DF0B2BB09EF30092D436 /* UpworkTests */,
 				F5A7DEF92BB09EEC0092D436 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,45 +114,26 @@
 		F5A7DEF92BB09EEC0092D436 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5A7DEF82BB09EEC0092D436 /* upwork.app */,
-				F5A7DF082BB09EF30092D436 /* upworkTests.xctest */,
+				F5A7DEF82BB09EEC0092D436 /* Upwork.app */,
+				F5A7DF082BB09EF30092D436 /* UpworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F5A7DEFA2BB09EEC0092D436 /* upwork */ = {
+		F5A7DF0B2BB09EF30092D436 /* UpworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				F5A7DEFB2BB09EEC0092D436 /* upworkApp.swift */,
-				F5A7DEFD2BB09EEC0092D436 /* ContentView.swift */,
-				F5A7DEFF2BB09EF20092D436 /* Assets.xcassets */,
-				F5A7DF012BB09EF20092D436 /* Preview Content */,
+				F5A7DF0C2BB09EF30092D436 /* UpworkTests.swift */,
 			);
-			path = upwork;
-			sourceTree = "<group>";
-		};
-		F5A7DF012BB09EF20092D436 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F5A7DF022BB09EF20092D436 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F5A7DF0B2BB09EF30092D436 /* upworkTests */ = {
-			isa = PBXGroup;
-			children = (
-				F5A7DF0C2BB09EF30092D436 /* upworkTests.swift */,
-			);
-			path = upworkTests;
+			path = UpworkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F5A7DEF72BB09EEB0092D436 /* upwork */ = {
+		F5A7DEF72BB09EEB0092D436 /* Upwork */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upwork" */;
+			buildConfigurationList = F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "Upwork" */;
 			buildPhases = (
 				F5A7DEF42BB09EEB0092D436 /* Sources */,
 				F5A7DEF52BB09EEB0092D436 /* Frameworks */,
@@ -112,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = upwork;
+			name = Upwork;
 			productName = upwork;
-			productReference = F5A7DEF82BB09EEC0092D436 /* upwork.app */;
+			productReference = F5A7DEF82BB09EEC0092D436 /* Upwork.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F5A7DF072BB09EF30092D436 /* upworkTests */ = {
+		F5A7DF072BB09EF30092D436 /* UpworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5A7DF1F2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upworkTests" */;
+			buildConfigurationList = F5A7DF1F2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "UpworkTests" */;
 			buildPhases = (
 				F5A7DF042BB09EF30092D436 /* Sources */,
 				F5A7DF052BB09EF30092D436 /* Frameworks */,
@@ -130,9 +161,9 @@
 			dependencies = (
 				F5A7DF0A2BB09EF30092D436 /* PBXTargetDependency */,
 			);
-			name = upworkTests;
+			name = UpworkTests;
 			productName = upworkTests;
-			productReference = F5A7DF082BB09EF30092D436 /* upworkTests.xctest */;
+			productReference = F5A7DF082BB09EF30092D436 /* UpworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "upwork" */;
+			buildConfigurationList = F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "Upwork" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,8 +198,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5A7DEF72BB09EEB0092D436 /* upwork */,
-				F5A7DF072BB09EF30092D436 /* upworkTests */,
+				F5A7DEF72BB09EEB0092D436 /* Upwork */,
+				F5A7DF072BB09EF30092D436 /* UpworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -178,8 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A7DF032BB09EF20092D436 /* Preview Assets.xcassets in Resources */,
-				F5A7DF002BB09EF20092D436 /* Assets.xcassets in Resources */,
+				F555A65C2BB0B0D000B88DD5 /* Assets.xcassets in Resources */,
+				F555A65B2BB0B0D000B88DD5 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A7DEFE2BB09EEC0092D436 /* ContentView.swift in Sources */,
-				F5A7DEFC2BB09EEC0092D436 /* upworkApp.swift in Sources */,
+				F555A6572BB0B0D000B88DD5 /* CustomToolbar.swift in Sources */,
+				F555A65E2BB0B0D000B88DD5 /* UpworkApp.swift in Sources */,
+				F555A6592BB0B0D000B88DD5 /* NewCustomToolbar.swift in Sources */,
+				F555A65D2BB0B0D000B88DD5 /* ContentView.swift in Sources */,
+				F555A6562BB0B0D000B88DD5 /* ComplexView.swift in Sources */,
+				F555A65A2BB0B0D000B88DD5 /* NewView.swift in Sources */,
+				F555A6582BB0B0D000B88DD5 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A7DF0D2BB09EF30092D436 /* upworkTests.swift in Sources */,
+				F5A7DF0D2BB09EF30092D436 /* UpworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +251,7 @@
 /* Begin PBXTargetDependency section */
 		F5A7DF0A2BB09EF30092D436 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5A7DEF72BB09EEB0092D436 /* upwork */;
+			target = F5A7DEF72BB09EEB0092D436 /* Upwork */;
 			targetProxy = F5A7DF092BB09EF30092D436 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -411,7 +447,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/upwork.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/upwork";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Upwork.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Upwork";
 			};
 			name = Debug;
 		};
@@ -430,14 +466,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/upwork.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/upwork";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Upwork.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Upwork";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "upwork" */ = {
+		F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "Upwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5A7DF1A2BB09EF30092D436 /* Debug */,
@@ -446,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upwork" */ = {
+		F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "Upwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5A7DF1D2BB09EF30092D436 /* Debug */,
@@ -455,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5A7DF1F2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "upworkTests" */ = {
+		F5A7DF1F2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "UpworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5A7DF202BB09EF30092D436 /* Debug */,

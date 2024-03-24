@@ -1,14 +1,14 @@
 //
-//  upworkTests.swift
-//  upworkTests
+//  UpworkTests.swift
+//  UpworkTests
 //
 //  Created by Amr Aboelela on 3/24/24.
 //
 
 import XCTest
-@testable import upwork
+@testable import Upwork
 
-final class upworkTests: XCTestCase {
+final class UpworkTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
