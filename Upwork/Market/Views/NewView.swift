@@ -95,7 +95,6 @@ struct MarketTabView: View {
     @State private var contentOffset: CGFloat = 0
     @State private var reloadToggle = false
     
-    
     /// Calculating Tab Width & Position
     func updateTabFrame(_ tabViewWidth: CGFloat) {
         let inputRange = tabs.indices.compactMap { index -> CGFloat? in
@@ -129,7 +128,11 @@ struct MarketTabView: View {
                     // Determine the view to display based on the index
                     switch index {
                     case 0:
-                        ListView()
+                        ListView(
+                            onSwipe: { direction in
+                                onSwipe(direction)
+                            }
+                        )
                             .frame(width: geometry.size.width, height: geometry.size.height)
                     case 1:
                         ComplexView()
@@ -154,40 +157,67 @@ struct MarketTabView: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .animation(.easeInOut, value: currentTab)
         .ignoresSafeArea(edges: .bottom)
-        .gesture(
-            DragGesture()
-                .onChanged { value in
-                    let verticalDistance = value.location.y - value.startLocation.y
-                    print("verticalDistance: \(verticalDistance)")
-                    let swipeThreshold = 5.0
-                    if verticalDistance > swipeThreshold {
-                        onSwipe(.down)
-                    } else if verticalDistance < -swipeThreshold {
-                        onSwipe(.up)
-                    } else {
-                        let horizontalDistance = value.location.x - value.startLocation.x
-                        if horizontalDistance > swipeThreshold {
-                            onSwipe(.right)
-                        } else if horizontalDistance < -swipeThreshold {
-                            onSwipe(.left)
-                        }
-                    }
-                }
+        .detectSwipe(
+            onSwipe: { direction in
+                onSwipe(direction)
+            }
         )
-        
     }
 }
 
 enum SwipeDirection {
-    case up, down, left, right
+    case up, down, left, right, none
 }
 
 struct ListView: View {
-
+    let onSwipe: (SwipeDirection) -> Void
+    @State private var previousOffset: CGFloat = 0
+    @State private var currentOffset: CGFloat = 0
+    @State private var swipeDirection: SwipeDirection = .none
+    @State private var prevDirection: SwipeDirection = .none
+    @State private var prevPrevDirection: SwipeDirection = .none
+    
+    func determineScrollDirection() {
+        guard abs(currentOffset - previousOffset) > 30 else {
+            return
+        }
+        if currentOffset > previousOffset {
+            swipeDirection = .down
+        } else if currentOffset < previousOffset {
+            swipeDirection = .up
+        } else {
+            swipeDirection = .none
+        }
+        print("swipeDirection: \(swipeDirection)")
+        if prevPrevDirection == swipeDirection {
+            if swipeDirection != .none {
+                onSwipe(swipeDirection)
+            }
+        }
+        previousOffset = currentOffset
+        prevPrevDirection = prevDirection
+        prevDirection = swipeDirection
+    }
+    
     var body: some View {
-        List(0..<20) { item in
-            Text("List Item \(item)")
-                .padding()
+        ScrollView {
+            VStack(spacing: 20) {
+                ForEach(0..<20) { item in
+                    Text("List Item \(item)")
+                        .padding()
+                }
+            }
+            .padding()
+            .background(
+                GeometryReader { geo in
+                    Color.clear
+                        .onChange(of: geo.frame(in: .global).minY) { newValue in
+                            currentOffset = newValue
+                            determineScrollDirection()
+                            //print("Scroll offset: \(currentOffset)")
+                        }
+                }
+            )
         }
     }
 }
@@ -319,10 +349,6 @@ struct NewView: View {
     @State private var indicatorWidth: CGFloat =  0.0
     @State private var indicatorPosition: CGFloat = 0.0
     
-    enum ScrollDirection {
-        case up, down
-    }
-    
     var body: some View {
         VStack(spacing: 0) {
             if isToolbarVisible {
@@ -341,7 +367,9 @@ struct NewView: View {
                 indicatorPosition: $indicatorPosition,
                 onSwipe: { direction in
                     print("NewView direction: \(direction)")
-                    isToolbarVisible = (direction == .up) ? false : true
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        isToolbarVisible = (direction == .up) ? false : true
+                    }
                 }
             )
             
@@ -350,7 +378,6 @@ struct NewView: View {
 }
 
 extension View {
-    @ViewBuilder
     func offsetX(completion: @escaping (CGRect) -> ()) -> some View {
         self
             .overlay {
@@ -362,6 +389,23 @@ extension View {
                         .onPreferenceChange(pickerOffsetKey.self, perform: completion)
                 }
             }
+    }
+    
+    func detectSwipe(onSwipe: @escaping (SwipeDirection) -> ()) -> some View {
+        self
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        let verticalDistance = value.location.y - value.startLocation.y
+                        print("MarketTabView verticalDistance: \(verticalDistance)")
+                        let swipeThreshold = 5.0
+                        if verticalDistance > swipeThreshold {
+                            onSwipe(.down)
+                        } else if verticalDistance < -swipeThreshold {
+                            onSwipe(.up)
+                        }
+                    }
+            )
     }
 }
 
