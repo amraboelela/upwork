@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 enum SwipeDirection {
     case up, down, left, right
 }
@@ -23,4 +24,4 @@ struct ListView: View {
 
 #Preview {
     ListView()
-}
+}*/

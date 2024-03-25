@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 struct ComplexView: View {
     var onSwipeUp: (() -> Void)?
     var body: some View {
@@ -30,4 +31,4 @@ struct ComplexView: View {
 
 #Preview {
     ComplexView()
-}
+}*/

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 struct MarketTabView: View {
     @Binding var tabs: [Tab]
     @Binding var currentTab: Tab
@@ -69,4 +70,4 @@ struct MarketTabView: View {
         onSwipe: {_ in }
     )
 }
-
+*/
