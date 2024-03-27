@@ -175,7 +175,7 @@ struct ListView: View {
     @State private var currentOffset: CGFloat = 0
     @State private var swipeDirection: SwipeDirection = .none
     @State private var prevDirection: SwipeDirection = .none
-    @State private var prevPrevDirection: SwipeDirection = .none
+    //@State private var prevPrevDirection: SwipeDirection = .none
     
     func determineScrollDirection() {
         guard abs(currentOffset - previousOffset) > 30 else {
@@ -189,13 +189,13 @@ struct ListView: View {
             swipeDirection = .none
         }
         print("swipeDirection: \(swipeDirection)")
-        if prevPrevDirection == swipeDirection {
+        if prevDirection == swipeDirection {
             if swipeDirection != .none {
                 onSwipe(swipeDirection)
             }
         }
         previousOffset = currentOffset
-        prevPrevDirection = prevDirection
+        //prevPrevDirection = prevDirection
         prevDirection = swipeDirection
     }
     
@@ -367,7 +367,7 @@ struct NewView: View {
                 indicatorPosition: $indicatorPosition,
                 onSwipe: { direction in
                     print("NewView direction: \(direction)")
-                    withAnimation(.easeInOut(duration: 0.2)) {
+                    withAnimation(.easeInOut(duration: 0.1)) {
                         isToolbarVisible = (direction == .up) ? false : true
                     }
                 }
