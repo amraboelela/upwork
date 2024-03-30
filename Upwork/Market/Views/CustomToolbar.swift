@@ -25,7 +25,6 @@ struct CustomToolbar<LeftContent: View, CenterContent: View, RightContent: View>
                 .padding()
         }
         .background(Color.white)
-        //.edgesIgnoringSafeArea(.top)
     }
 }
 

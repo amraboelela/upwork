@@ -6,77 +6,13 @@
 //
 
 import SwiftUI
-
-/*
-/// A simple class that will be useful to do linear interpolation calculations for our Dynmaic Tab Animation
-class LinearInterpolation {
-    private var length: Int
-    private var inputRange: [CGFloat]
-    private var outputRange: [CGFloat]
-    
-    init(inputRange: [CGFloat], outputRange: [CGFloat]) {
-        /// Safe Check
-        assert(inputRange.count == outputRange.count)
-        self.length = inputRange.count - 1
-        self.inputRange = inputRange
-        self.outputRange = outputRange
-    }
-    
-    func calculate(for x: CGFloat) -> CGFloat {
-        /// If Value less than it's Initial Input Range
-        if x <= inputRange[0] { return outputRange[0] }
-        
-        for index in 1...length {
-            let x1 = inputRange[index - 1]
-            let x2 = inputRange[index]
-            
-            let y1 = outputRange[index - 1]
-            let y2 = outputRange[index]
-            
-            /// Linear Interpolation Formula: y1 + ((y2-y1) / (x2-x1)) * (x-x1)
-            if x <= inputRange[index] {
-                let y = y1 + ((y2-y1) / (x2-x1)) * (x-x1)
-                return y
-            }
-        }
-        
-        /// If Value Exceeds it's Maximum Input Range
-        return outputRange[length]
-    }
-}
-
+ 
 struct TabsView: View {
     @Binding var tabs: [Tab]
     @Binding var currentTab: Tab
-    @State private var indicatorWidth: CGFloat = 0
-    @State private var indicatorPosition: CGFloat = 0
-    @State private var contentOffset: CGFloat = 0
+    @Binding var indicatorWidth: CGFloat
+    @Binding var indicatorPosition: CGFloat
     @Environment(\.colorScheme) var colorScheme
-    
-    /// Calculating Tab Width & Position
-    func updateTabFrame(_ tabViewWidth: CGFloat) {
-        let inputRange = tabs.indices.compactMap { index -> CGFloat? in
-            return CGFloat(index) * tabViewWidth
-        }
-        
-        let outputRangeForWidth = tabs.compactMap { tab -> CGFloat? in
-            return tab.width
-        }
-        
-        let outputRangeForPosition = tabs.compactMap { tab -> CGFloat? in
-            return tab.minX
-        }
-        
-        let widthInterpolation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForWidth)
-        let positionInterpolation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForPosition)
-        
-        indicatorWidth = widthInterpolation.calculate(for: -contentOffset)
-        indicatorPosition = positionInterpolation.calculate(for: -contentOffset)
-    }
-    
-    func index(of tab: Tab) -> Int {
-        return tabs.firstIndex(of: tab) ?? 0
-    }
     
     func updateTabWithRect(tabId: UUID, rect: CGRect) {
         if let index = tabs.firstIndex(where: { $0.id == tabId }) {
@@ -92,8 +28,6 @@ struct TabsView: View {
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         currentTab = tab
-                        contentOffset = CGFloat(index) * UIScreen.main.bounds.width * -1 // Use index here
-                        updateTabFrame(UIScreen.main.bounds.width)
                     }
                 }) {
                     HStack {
@@ -159,7 +93,9 @@ struct TabsView: View {
 #Preview {
     TabsView(
         tabs: .constant(Tab.sampleTabs),
-        currentTab: .constant(Tab.sampleTabs[2])
+        currentTab: .constant(Tab.sampleTabs[0]),
+        indicatorWidth: .constant(100.0),
+        indicatorPosition: .constant(0.0)
     )
-}*/
+}
 

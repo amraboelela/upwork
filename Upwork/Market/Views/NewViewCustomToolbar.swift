@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-/*
 struct NewViewCustomToolbar: View {
     var body: some View {
         CustomToolbar(
@@ -50,4 +49,4 @@ struct NewViewCustomToolbar: View {
 
 #Preview {
     NewViewCustomToolbar()
-}*/
+}

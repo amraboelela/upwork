@@ -7,7 +7,6 @@
 
 import Foundation
 
-/*
 struct Tab: Identifiable, Hashable {
     var id: UUID = UUID()
     var title: String?
@@ -23,4 +22,4 @@ struct Tab: Identifiable, Hashable {
         .init(iconName: "circle"),
         .init(iconName: "diamond")
     ]
-}*/
+}
