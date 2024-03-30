@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
  struct ProfileTab: Identifiable, Hashable {
      var id: UUID = UUID()
      var title: String?
@@ -421,4 +422,4 @@ struct ProfilepickerOffsetKey: PreferenceKey {
 
 #Preview {
     ProfileCustomPicker(isOpened: .constant(false))
-}
+}*/

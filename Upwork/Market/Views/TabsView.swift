@@ -92,8 +92,8 @@ struct TabsView: View {
 
 #Preview {
     TabsView(
-        tabs: .constant(Tab.sampleTabs),
-        currentTab: .constant(Tab.sampleTabs[0]),
+        tabs: .constant(Tab.newSampleTabs),
+        currentTab: .constant(Tab.newSampleTabs[0]),
         indicatorWidth: .constant(100.0),
         indicatorPosition: .constant(0.0)
     )

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewView: View {
-    @State private var currentTab = Tab.sampleTabs[0]
-    @State private var tabs = Tab.sampleTabs
+    @State private var currentTab = Tab.newSampleTabs[0]
+    @State private var tabs = Tab.newSampleTabs
     @State private var isToolbarVisible = true
     @State private var indicatorWidth: CGFloat =  0.0
     @State private var indicatorPosition: CGFloat = 0.0
@@ -25,7 +25,7 @@ struct NewView: View {
                 indicatorWidth: $indicatorWidth,
                 indicatorPosition: $indicatorPosition
             )
-            MarketTabView(
+            ProfileTabView(
                 tabs: $tabs,
                 currentTab: $currentTab,
                 indicatorWidth: $indicatorWidth,

@@ -1,5 +1,5 @@
 //
-//  MarketTabView.swift
+//  ProfileTabView.swift
 //  Market
 //
 //  Created by Amr Aboelela on 3/24/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MarketTabView: View {
+struct ProfileTabView: View {
     @Binding var tabs: [Tab]
     @Binding var currentTab: Tab
     @Binding var indicatorWidth: CGFloat
@@ -88,9 +88,9 @@ struct MarketTabView: View {
 }
 
 #Preview {
-    MarketTabView(
-        tabs: .constant(Tab.sampleTabs),
-        currentTab: .constant(Tab.sampleTabs[0]),
+    ProfileTabView(
+        tabs: .constant(Tab.profileSampleTabs),
+        currentTab: .constant(Tab.profileSampleTabs[0]),
         indicatorWidth: .constant(100.0),
         indicatorPosition: .constant(100.0),
         onSwipe: {_ in }

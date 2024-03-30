@@ -1,8 +1,8 @@
 //
 //  Tab.swift
-//  Market
+//  Sticky
 //
-//  Created by Amr Aboelela on 3/24/24.
+//  Created by Amr Aboelela on 3/30/24.
 //
 
 import Foundation
@@ -16,10 +16,22 @@ struct Tab: Identifiable, Hashable {
     var minX: CGFloat = 0
     
     // Title is same as the Asset Image Name
-    static var sampleTabs: [Tab] = [
+    static var newSampleTabs: [Tab] = [
         .init(iconName: "square"),
         .init(iconName: "triangle"),
         .init(iconName: "circle"),
         .init(iconName: "diamond")
+    ]
+    
+    // Title is same as the Asset Image Name
+    static var profileSampleTabs: [Tab] = [
+        .init(iconName: "globe"),
+        .init(iconName: "circle.grid.2x1"),
+        .init(iconName: "chart.xyaxis.line"),
+        .init(iconName: "flowchart"),
+        .init(iconName: "hammer"),
+        .init(iconName: "banknote"),
+        .init(iconName: "checkmark.circle"),
+        .init(iconName: "person")
     ]
 }
