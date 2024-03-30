@@ -17,7 +17,7 @@
 		F555A65E2BB0B0D000B88DD5 /* UpworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */; };
 		F555A6612BB0B38D00B88DD5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A65F2BB0B38C00B88DD5 /* Tab.swift */; };
 		F555A6632BB0B48700B88DD5 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6622BB0B48700B88DD5 /* TabsView.swift */; };
-		F555A6652BB0B89F00B88DD5 /* ProfileTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6642BB0B89F00B88DD5 /* ProfileTabView.swift */; };
+		F555A6652BB0B89F00B88DD5 /* MarketTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */; };
 		F5A7DF0D2BB09EF30092D436 /* UpworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7DF0C2BB09EF30092D436 /* UpworkTests.swift */; };
 		F5B9855C2BB8860C001EAAEA /* ProfileCustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B985592BB8860C001EAAEA /* ProfileCustomPicker.swift */; };
 		F5B9855D2BB8860C001EAAEA /* TwitterProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9855A2BB8860C001EAAEA /* TwitterProfile.swift */; };
@@ -50,7 +50,7 @@
 		F555A6542BB0B0D000B88DD5 /* UpworkApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkApp.swift; sourceTree = "<group>"; };
 		F555A65F2BB0B38C00B88DD5 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		F555A6622BB0B48700B88DD5 /* TabsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
-		F555A6642BB0B89F00B88DD5 /* ProfileTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabView.swift; sourceTree = "<group>"; };
+		F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTabView.swift; sourceTree = "<group>"; };
 		F5A7DEF82BB09EEC0092D436 /* Upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A7DF082BB09EF30092D436 /* UpworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A7DF0C2BB09EF30092D436 /* UpworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkTests.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				F555A64B2BB0B0D000B88DD5 /* ListView.swift */,
 				F555A64C2BB0B0D000B88DD5 /* NewViewCustomToolbar.swift */,
 				F555A64D2BB0B0D000B88DD5 /* NewView.swift */,
-				F555A6642BB0B89F00B88DD5 /* ProfileTabView.swift */,
+				F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */,
 				F5B985592BB8860C001EAAEA /* ProfileCustomPicker.swift */,
 				F555A6622BB0B48700B88DD5 /* TabsView.swift */,
 				F5B9855A2BB8860C001EAAEA /* TwitterProfile.swift */,
@@ -301,7 +301,7 @@
 				F555A6572BB0B0D000B88DD5 /* CustomToolbar.swift in Sources */,
 				F5B9855D2BB8860C001EAAEA /* TwitterProfile.swift in Sources */,
 				F555A65E2BB0B0D000B88DD5 /* UpworkApp.swift in Sources */,
-				F555A6652BB0B89F00B88DD5 /* ProfileTabView.swift in Sources */,
+				F555A6652BB0B89F00B88DD5 /* MarketTabView.swift in Sources */,
 				F555A6592BB0B0D000B88DD5 /* NewViewCustomToolbar.swift in Sources */,
 				F555A6612BB0B38D00B88DD5 /* Tab.swift in Sources */,
 				F5B9857F2BB89C06001EAAEA /* LinearInterpolation.swift in Sources */,

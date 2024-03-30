@@ -1,5 +1,5 @@
 //
-//  ProfileTabView.swift
+//  MarketTabView.swift
 //  Market
 //
 //  Created by Amr Aboelela on 3/24/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileTabView: View {
+struct MarketTabView: View {
     @Binding var tabs: [Tab]
     @Binding var currentTab: Tab
     @Binding var indicatorWidth: CGFloat
@@ -19,18 +19,15 @@ struct ProfileTabView: View {
     
     /// Calculating Tab Width & Position
     func updateTabFrame(_ tabViewWidth: CGFloat) {
-        let inputRange = tabs.indices.compactMap { index -> CGFloat? in
+        let inputRange = tabs.indices.map { index -> CGFloat in
             return CGFloat(index) * tabViewWidth
         }
-        
-        let outputRangeForWidth = tabs.compactMap { tab -> CGFloat? in
+        let outputRangeForWidth = tabs.map { tab -> CGFloat in
             return tab.width
         }
-        
-        let outputRangeForPosition = tabs.compactMap { tab -> CGFloat? in
+        let outputRangeForPosition = tabs.map { tab -> CGFloat in
             return tab.minX
         }
-        
         let widthInterpolation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForWidth)
         let positionInterpolation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForPosition)
         
@@ -38,13 +35,9 @@ struct ProfileTabView: View {
         indicatorPosition = positionInterpolation.calculate(for: -contentOffset)
     }
     
-    func index(of tab: Tab) -> Int {
-        return tabs.firstIndex(of: tab) ?? 0
-    }
-    
     var body: some View {
         TabView(selection: $currentTab) {
-            ForEach(Array(tabs.enumerated()), id: \.element.id) { index, tab in
+            ForEach(tabs.indices, id: \.self) { index in
                 // Use a GeometryReader to adjust the view based on the tab index
                 GeometryReader { geometry in
                     // Determine the view to display based on the index
@@ -55,7 +48,7 @@ struct ProfileTabView: View {
                                 onSwipe(direction)
                             }
                         )
-                            .frame(width: geometry.size.width, height: geometry.size.height)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
                     case 1:
                         ComplexView()
                             .frame(width: geometry.size.width, height: geometry.size.height)
@@ -68,12 +61,12 @@ struct ProfileTabView: View {
                 .clipped()
                 .ignoresSafeArea()
                 .offsetX { rect in
-                    if currentTab.id == tab.id {
-                        contentOffset = rect.minX - (rect.width * CGFloat(self.index(of: tab)))
+                    if currentTab.id == tabs[index].id {
+                        contentOffset = rect.minX - (rect.width * CGFloat(index))
                     }
                     updateTabFrame(rect.width)
                 }
-                .tag(tab)
+                .tag(tabs[index])
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
@@ -88,9 +81,9 @@ struct ProfileTabView: View {
 }
 
 #Preview {
-    ProfileTabView(
-        tabs: .constant(Tab.profileSampleTabs),
-        currentTab: .constant(Tab.profileSampleTabs[0]),
+    MarketTabView(
+        tabs: .constant(Tab.newSampleTabs),
+        currentTab: .constant(Tab.newSampleTabs[0]),
         indicatorWidth: .constant(100.0),
         indicatorPosition: .constant(100.0),
         onSwipe: {_ in }

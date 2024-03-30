@@ -11,7 +11,7 @@ import SwiftUI
 struct UpworkApp: App {
     var body: some Scene {
         WindowGroup {
-            NewView()
+            ProfileCustomPicker()
         }
     }
 }

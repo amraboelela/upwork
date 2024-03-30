@@ -25,7 +25,7 @@ struct NewView: View {
                 indicatorWidth: $indicatorWidth,
                 indicatorPosition: $indicatorPosition
             )
-            ProfileTabView(
+            MarketTabView(
                 tabs: $tabs,
                 currentTab: $currentTab,
                 indicatorWidth: $indicatorWidth,
