@@ -119,7 +119,7 @@
 				F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */,
 				F555A6622BB0B48700B88DD5 /* TabBarView.swift */,
 				F5B985A42BB8CE50001EAAEA /* MarketTabBarView.swift */,
-				F5B985B72BB9EA7F001EAAEA /* Twitter_other */,
+				F5B9858F2BB8AE88001EAAEA /* Original */,
 				F5B985A52BB8CE50001EAAEA /* Twitter */,
 			);
 			path = Views;
@@ -129,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				F5B985952BB8B939001EAAEA /* Constants.swift */,
-				F5B9858F2BB8AE88001EAAEA /* Original */,
 				F5B985802BB89D56001EAAEA /* Enums */,
 				F5B9856C2BB898AD001EAAEA /* Extensions */,
 				F5B985862BB8A5EB001EAAEA /* Models */,
@@ -222,6 +221,9 @@
 			children = (
 				F5B9858D2BB8AE88001EAAEA /* OriginalProfileCustomPicker.swift */,
 				F5B9858E2BB8AE88001EAAEA /* OriginalTwitterProfile.swift */,
+				F5B985B42BB9EA7F001EAAEA /* OriginalTwitterListView.swift */,
+				F5B985B52BB9EA7F001EAAEA /* OriginalTwitterTabBarView.swift */,
+				F5B985B62BB9EA7F001EAAEA /* ProfileCustomPicker.swift */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -241,16 +243,6 @@
 				F5B985AA2BB8D561001EAAEA /* TwitterTabView.swift */,
 			);
 			path = Twitter;
-			sourceTree = "<group>";
-		};
-		F5B985B72BB9EA7F001EAAEA /* Twitter_other */ = {
-			isa = PBXGroup;
-			children = (
-				F5B985B42BB9EA7F001EAAEA /* OriginalTwitterListView.swift */,
-				F5B985B52BB9EA7F001EAAEA /* OriginalTwitterTabBarView.swift */,
-				F5B985B62BB9EA7F001EAAEA /* ProfileCustomPicker.swift */,
-			);
-			path = Twitter_other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct TwitterTabView: View {
-    @Binding var tabs: [Tab]
-    @Binding var currentTab: Tab
-    @Binding var indicatorWidth: CGFloat
-    @Binding var indicatorPosition: CGFloat
-    @Binding var tabHeight: CGFloat
-    let onSwipe: (SwipeDirection) -> Void
+    @State private var tabs = Tab.twitterTabs
+    @State private var currentTab = Tab.twitterTabs[0]
+    @State private var indicatorWidth: CGFloat =  0.0
+    @State private var indicatorPosition: CGFloat = 0.0
+    @State private var tabHeight: CGFloat = 0.0
     
     @State private var contentOffset: CGFloat = 0
     @State private var listHeight: CGFloat = 500
     @State private var reloadToggle = false
     
+    @Binding var scrollViewHeight: CGFloat
     
     /// Calculating Tab Width & Position
     func updateTabFrame(_ tabViewWidth: CGFloat) {
@@ -40,105 +40,17 @@ struct TwitterTabView: View {
     
     var getTabHeight: CGFloat {
         let result = max(1824, listHeight) * 1.5
-        print("getTabHeight result: \(result)")
+        //print("getTabHeight result: \(result)")
         return result
     }
     
     var body: some View {
-        //ScrollView {
-        //VStack {
-            //GeometryReader { geometry in
-        TabView(selection: $currentTab) {
-            //VStack {
-            ForEach(tabs.indices, id: \.self) { index in
-                // Use a GeometryReader to adjust the view based on the tab index
-                GeometryReader { geometry in
-                    // Determine the view to display based on the index
-                    switch index {
-                    case 0:
-                        TwitterListView()
-                            .frame(width: geometry.size.width)
-                            .background(
-                                GeometryReader { listGeometry in
-                                    Color.clear
-                                        .onAppear {
-                                            listHeight = listGeometry.size.height
-                                            print("listGeometry.size: \(listGeometry.size)")
-                                        }
-                                }
-                            )
-                    case 1:
-                        ComplexView()
-                            .frame(width: geometry.size.width, height: tabHeight)
-                        // Add more cases as needed for additional tabs
-                    default:
-                        Text("Tab \(index + 1)")
-                            .frame(width: geometry.size.width, height: tabHeight)
-                    }
-                }
-                //.clipped()
-                //.ignoresSafeArea()
-                .offsetX { rect in
-                    if currentTab.id == tabs[index].id {
-                        contentOffset = rect.minX - (rect.width * CGFloat(index))
-                    }
-                    updateTabFrame(rect.width)
-                }
-                .tag(tabs[index])
-            }
-        }
-        .frame(height: getTabHeight)
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .animation(.easeInOut, value: currentTab)
-        .ignoresSafeArea(edges: .bottom)
-        .detectSwipe(
-            onSwipe: { direction in
-                onSwipe(direction)
-            }
-        )
-            //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-         //   .frame(height: listHeight)
-            /*.background(
-             GeometryReader { proxy in
-             Color.clear
-             .onAppear {
-             let rect = proxy.frame(in: .global)
-             //tabHeight = rect.height
-             //print("rect: \(rect)")
-             /*if index == 0 {
-              indicatorWidth = rect.width
-              indicatorPosition = rect.minX
-              }*/
-             //updateTabWithRect(tabId: tab.id, rect: rect)
-             }
-             }
-             
-             GeometryReader { geometry in
-             Color.clear
-             .frame(height: 1) // Ensure the GeometryReader has some height
-             .onAppear {
-             tabHeight = geometry.size.height
-             print("tabHeight: \(tabHeight)")
-             }
-             }
-             )*/
-            //.frame(height: geometry.size.height)
-        //}
-            //}
-        /*}
-        .background(
-            GeometryReader { geometry in
-                Color.clear
-                    .onAppear {
-                        tabHeight = geometry.size.height
-                        print("tabHeight: \(tabHeight)")
-                    }
-            }
-        )
-        
-        ScrollView(.vertical, showsIndicators: false) {
+        VStack {
+            TwitterTabBarView(
+                tabs: $tabs,
+                currentTab: $currentTab
+            )
             TabView(selection: $currentTab) {
-            //VStack {
                 ForEach(tabs.indices, id: \.self) { index in
                     // Use a GeometryReader to adjust the view based on the tab index
                     GeometryReader { geometry in
@@ -146,18 +58,25 @@ struct TwitterTabView: View {
                         switch index {
                         case 0:
                             TwitterListView()
-                                .frame(width: geometry.size.width, height: geometry.size.height)
+                                .frame(width: geometry.size.width)
+                                .background (
+                                    GeometryReader { listGeometry in
+                                        Color.clear
+                                            .onAppear {
+                                                listHeight = listGeometry.size.height
+                                                //print("listGeometry.size: \(listGeometry.size)")
+                                            }
+                                    }
+                                )
                         case 1:
                             ComplexView()
-                                .frame(width: geometry.size.width, height: geometry.size.height)
+                                .frame(width: geometry.size.width, height: scrollViewHeight)
                             // Add more cases as needed for additional tabs
                         default:
                             Text("Tab \(index + 1)")
-                                .frame(width: geometry.size.width, height: geometry.size.height)
+                                .frame(width: geometry.size.width, height: scrollViewHeight)
                         }
                     }
-                    //.clipped()
-                    //.ignoresSafeArea()
                     .offsetX { rect in
                         if currentTab.id == tabs[index].id {
                             contentOffset = rect.minX - (rect.width * CGFloat(index))
@@ -167,25 +86,23 @@ struct TwitterTabView: View {
                     .tag(tabs[index])
                 }
             }
+            .frame(height: getTabHeight)
             .tabViewStyle(.page(indexDisplayMode: .never))
             .animation(.easeInOut, value: currentTab)
             .ignoresSafeArea(edges: .bottom)
-            .detectSwipe(
-                onSwipe: { direction in
-                    onSwipe(direction)
+            .background(
+                GeometryReader { geo in
+                    Color.clear
+                        .onChange(of: geo.frame(in: .global).minY) { newValue in
+                            let currentOffset = newValue
+                            print("currentOffset: \(currentOffset)")
+                        }
                 }
             )
-        }*/
+        }
     }
 }
 
 #Preview {
-    TwitterTabView(
-        tabs: .constant(Tab.newSampleTabs),
-        currentTab: .constant(Tab.newSampleTabs[0]),
-        indicatorWidth: .constant(100.0),
-        indicatorPosition: .constant(100.0),
-        tabHeight: .constant(100.0),
-        onSwipe: {_ in }
-    )
+    TwitterTabView(scrollViewHeight: .constant(500.0))
 }

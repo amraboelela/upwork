@@ -27,7 +27,7 @@ extension View {
                 DragGesture()
                     .onChanged { value in
                         let verticalDistance = value.location.y - value.startLocation.y
-                        //print("MarketTabView verticalDistance: \(verticalDistance)")
+                        print("MarketTabView verticalDistance: \(verticalDistance)")
                         let swipeThreshold = 5.0
                         if verticalDistance > swipeThreshold {
                             onSwipe(.down)
@@ -35,6 +35,26 @@ extension View {
                             onSwipe(.up)
                         }
                     }
+            )
+    }
+    
+    func read(offset: Binding<CGFloat>) -> some View {
+        self
+            .background(
+                GeometryReader { geo in
+                    Color.clear
+                        .onAppear {
+                            let minY = geo.frame(in: .global).minY
+                            offset.wrappedValue = minY
+                        }
+                        .onChange(of: geo.frame(in: .global).minY) { newValue in
+                            let diff = abs(offset.wrappedValue - newValue)
+                            if diff > 1.0 {
+                                offset.wrappedValue = newValue
+                                print("sticky offset: \(offset.wrappedValue)")
+                            }
+                        }
+                }
             )
     }
     

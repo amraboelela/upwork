@@ -10,6 +10,8 @@ import SwiftUI
 struct StickyHeaderView: View {
     @Binding var offset: CGFloat
     @State var titleOffset: CGFloat = 0
+    var initialHeight = 180.0
+    var minDistance = 80.0
     
     func blurViewOpacity() -> Double {
         let progress = -(offset + 80) / 150
@@ -24,34 +26,29 @@ struct StickyHeaderView: View {
     }
     
     var body: some View {
-        GeometryReader { proxy -> AnyView in
-            // Sticky Header...
-            let minY = proxy.frame(in: .global).minY
-            Task {
-                self.offset = minY
-            }
-            return AnyView(
-                ZStack {
-                    BlurView()
-                        .opacity(blurViewOpacity())
-                    HStack(spacing: 10) {
-                        Text("@Kavsoft")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                        Text("150 Tweets")
-                            .foregroundColor(.white)
-                    }
-                    // to slide from bottom added extra 60..
-                    .offset(y: 120)
-                    .offset(y: titleOffset > 100 ? 0 : -getTitleTextOffset())
-                    .opacity(titleOffset < 100 ? 1 : 0)
+        VStack {
+            ZStack {
+                BlurView()
+                    .opacity(blurViewOpacity())
+                HStack(spacing: 10) {
+                    Text("@Kavsoft")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    Text("150 Tweets")
+                        .foregroundColor(.white)
                 }
-                    .clipped()
-                    .frame(height: minY > 0 ? 180 + minY : nil)
-                    .offset(y: minY > 0 ? -minY : -minY < 80 ? 0 : -minY - 80)
-            )
+                // to slide from bottom added extra 60..
+                .offset(y: initialHeight - 60.0)
+                .offset(y: titleOffset > 100 ? 0 : -getTitleTextOffset())
+                .opacity(titleOffset < 100 ? 1 : 0)
+            }
+            .clipped()
+            .frame(height: offset > 0 ? initialHeight + offset : nil)
+            .offset(y: offset > 0 ? -offset : -offset < minDistance ? 0 : -offset - minDistance)
+            .read(offset: $offset)
+            .zIndex(1)
         }
-        .frame(height: 180)
+        .frame(height: initialHeight)
         .zIndex(1)
     }
 }
