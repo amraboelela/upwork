@@ -19,7 +19,7 @@ struct NewView: View {
             if isToolbarVisible {
                 NewViewCustomToolbar()
             }
-            TabsView(
+            TabBarView(
                 tabs: $tabs,
                 currentTab: $currentTab,
                 indicatorWidth: $indicatorWidth,

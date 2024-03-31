@@ -27,7 +27,7 @@ extension View {
                 DragGesture()
                     .onChanged { value in
                         let verticalDistance = value.location.y - value.startLocation.y
-                        print("MarketTabView verticalDistance: \(verticalDistance)")
+                        //print("MarketTabView verticalDistance: \(verticalDistance)")
                         let swipeThreshold = 5.0
                         if verticalDistance > swipeThreshold {
                             onSwipe(.down)
@@ -36,6 +36,11 @@ extension View {
                         }
                     }
             )
+    }
+    
+    // Get Screen Size..
+    func getRect() -> CGRect {
+        return UIScreen.main.bounds
     }
 }
 

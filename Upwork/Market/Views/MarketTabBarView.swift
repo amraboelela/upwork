@@ -1,13 +1,13 @@
 //
-//  TabsView.swift
+//  MarketTabBarView.swift
 //  Market
 //
-//  Created by Amr Aboelela on 3/24/24.
+//  Created by Amr Aboelela on 3/30/24.
 //
 
 import SwiftUI
  
-struct TabsView: View {
+struct MarketTabBarView: View {
     @Binding var tabs: [Tab]
     @Binding var currentTab: Tab
     @Binding var indicatorWidth: CGFloat
@@ -31,24 +31,6 @@ struct TabsView: View {
                     }
                 }) {
                     HStack {
-                        // If it's the first tab (index == 0), you can add specific logic or views here
-                        if index == 0 {
-                            // Specific view or styling for the first tab
-                            Image(systemName: tab.iconName ?? "circle")
-                                .foregroundColor(currentTab.id == tab.id ? (colorScheme == .dark ? .white : .black) : .gray)
-                        } else {
-                            // General view for other tabs
-                            if let iconName = tab.iconName {
-                                Image(systemName: iconName)
-                                    .foregroundColor(currentTab.id == tab.id ? (colorScheme == .dark ? .white : .black) : .gray)
-                            } else if let imageName = tab.imageName {
-                                Image(imageName)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 20) // Adjust the frame as necessary
-                            }
-                        }
-                        
                         if let title = tab.title {
                             Text(title)
                                 .foregroundColor(currentTab.id == tab.id ? (colorScheme == .dark ? .white : .black) : .gray)
@@ -91,9 +73,9 @@ struct TabsView: View {
 }
 
 #Preview {
-    TabsView(
-        tabs: .constant(Tab.newSampleTabs),
-        currentTab: .constant(Tab.newSampleTabs[0]),
+    MarketTabBarView(
+        tabs: .constant(Tab.twitterTabs),
+        currentTab: .constant(Tab.twitterTabs[0]),
         indicatorWidth: .constant(100.0),
         indicatorPosition: .constant(0.0)
     )

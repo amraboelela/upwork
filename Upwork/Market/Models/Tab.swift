@@ -1,6 +1,6 @@
 //
 //  Tab.swift
-//  Sticky
+//  Market
 //
 //  Created by Amr Aboelela on 3/30/24.
 //
@@ -33,5 +33,12 @@ struct Tab: Identifiable, Hashable {
         .init(iconName: "banknote"),
         .init(iconName: "checkmark.circle"),
         .init(iconName: "person")
+    ]
+
+    static var twitterTabs: [Tab] = [
+        .init(title: "Tweets"),
+        .init(title: "Tweets & Likes"),
+        .init(title: "Media"),
+        .init(title: "Likes")
     ]
 }
