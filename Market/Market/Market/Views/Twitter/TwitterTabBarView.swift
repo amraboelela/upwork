@@ -10,8 +10,11 @@ import SwiftUI
 struct TwitterTabBarView: View {
     @Binding var tabs: [Tab]
     @Binding var currentTab: Tab
-    @State private var tabBarOffset: CGFloat = 0.0
+    @Binding var tabBarOffset: CGFloat
+    
     @Environment(\.colorScheme) var colorScheme
+    
+    let minDistance = 90.0
     
     var body: some View {
         VStack(spacing: 0) {
@@ -26,7 +29,7 @@ struct TwitterTabBarView: View {
         }
         .padding(.top, 30)
         .background(colorScheme == .dark ? Color.black : Color.white)
-        .offset(y: tabBarOffset < 90.0 ? -tabBarOffset + 90.0 : 0)
+        .offset(y: tabBarOffset < minDistance ? -tabBarOffset + minDistance : 0)
         .read(offset: $tabBarOffset)
         .zIndex(1)
     }
@@ -35,7 +38,8 @@ struct TwitterTabBarView: View {
 #Preview {
     TwitterTabBarView(
         tabs: .constant(Tab.twitterTabs),
-        currentTab: .constant(Tab.twitterTabs[0])
+        currentTab: .constant(Tab.twitterTabs[0]),
+        tabBarOffset: .constant(0.0)
     )
 }
 

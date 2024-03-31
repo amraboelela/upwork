@@ -13,7 +13,6 @@ extension View {
             .overlay {
                 GeometryReader { proxy in
                     let rect = proxy.frame(in: .global)
-                    
                     Color.clear
                         .preference(key: PickerOffsetKey.self, value: rect)
                         .onPreferenceChange(PickerOffsetKey.self, perform: completion)
@@ -51,7 +50,7 @@ extension View {
                             let diff = abs(offset.wrappedValue - newValue)
                             if diff > 1.0 {
                                 offset.wrappedValue = newValue
-                                print("sticky offset: \(offset.wrappedValue)")
+                                //print("sticky offset: \(offset.wrappedValue)")
                             }
                         }
                 }
