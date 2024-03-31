@@ -39,14 +39,8 @@ struct TwitterTabView: View {
         indicatorPosition = positionInterpolation.calculate(for: -contentOffset)
     }
     
-    func getStaticViewHeight() -> CGFloat {
+    var staticViewHeight: CGFloat {
         return scrollViewHeight * 0.7
-    }
-    
-    func getTabHeight() -> CGFloat {
-        let result = max(1824, listHeight) * 1.2
-        print("getTabHeight result: \(result)")
-        return result
     }
     
     var body: some View {
@@ -76,13 +70,13 @@ struct TwitterTabView: View {
                                 )
                         case 1:
                             ComplexView()
-                                .frame(width: geometry.size.width, height: getStaticViewHeight())
+                                .frame(width: geometry.size.width, height: staticViewHeight)
                                 .offset(y: tabBarOffset < minDistance ? -tabBarOffset + minDistance : 0)
                                 //.read(offset: $tabBarOffset)
                             // Add more cases as needed for additional tabs
                         default:
                             Text("Tab \(index + 1)")
-                                .frame(width: geometry.size.width, height: getStaticViewHeight())
+                                .frame(width: geometry.size.width, height: staticViewHeight)
                                 .offset(y: tabBarOffset < minDistance ? -tabBarOffset + minDistance : 0)
                         }
                     }
@@ -95,7 +89,7 @@ struct TwitterTabView: View {
                     .tag(tabs[index])
                 }
             }
-            .frame(height: getTabHeight())
+            .frame(height: listHeight)
             .tabViewStyle(.page(indexDisplayMode: .never))
             .animation(.easeInOut, value: currentTab)
             .ignoresSafeArea(edges: .bottom)
