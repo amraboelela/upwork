@@ -10,7 +10,7 @@ import SwiftUI
 struct TwitterListView: View {
 
     var body: some View {
-        VStack(spacing: 18) {
+        VStack(spacing: 10) {
             TweetView(
                 tweet: Constants.sampleTweet
             )

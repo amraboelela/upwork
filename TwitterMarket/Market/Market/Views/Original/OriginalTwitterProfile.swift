@@ -8,7 +8,7 @@
 import SwiftUI
 
 /*
-struct TwitterProfile: View {
+struct OriginalTwitterProfile: View {
     
     @State var offset: CGFloat = 0
     
@@ -272,7 +272,6 @@ struct TwitterProfile_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
-
 
 // Extending View to get Screen Size...
 extension View{

@@ -24,7 +24,6 @@
 		F5B985842BB89E44001EAAEA /* ComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B985822BB89E44001EAAEA /* ComplexView.swift */; };
 		F5B985912BB8AE88001EAAEA /* OriginalProfileCustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9858D2BB8AE88001EAAEA /* OriginalProfileCustomPicker.swift */; };
 		F5B985922BB8AE88001EAAEA /* OriginalTwitterProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9858E2BB8AE88001EAAEA /* OriginalTwitterProfile.swift */; };
-		F5B985942BB8B860001EAAEA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B985932BB8B860001EAAEA /* BlurView.swift */; };
 		F5B985962BB8B939001EAAEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B985952BB8B939001EAAEA /* Constants.swift */; };
 		F5B9859A2BB8C000001EAAEA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B985992BB8C000001EAAEA /* TabButton.swift */; };
 		F5B9859C2BB8C42D001EAAEA /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9859B2BB8C42C001EAAEA /* ProfileHeader.swift */; };
@@ -53,14 +52,13 @@
 		F555A65F2BB0B38C00B88DD5 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		F555A6622BB0B48700B88DD5 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		F555A6642BB0B89F00B88DD5 /* MarketTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTabView.swift; sourceTree = "<group>"; };
-		F5A7DEF82BB09EEC0092D436 /* Market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Market.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A7DEF82BB09EEC0092D436 /* TwitterMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B9856B2BB898AD001EAAEA /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F5B9857B2BB89948001EAAEA /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
 		F5B9857D2BB89C06001EAAEA /* LinearInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearInterpolation.swift; sourceTree = "<group>"; };
 		F5B985822BB89E44001EAAEA /* ComplexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexView.swift; sourceTree = "<group>"; };
 		F5B9858D2BB8AE88001EAAEA /* OriginalProfileCustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalProfileCustomPicker.swift; sourceTree = "<group>"; };
 		F5B9858E2BB8AE88001EAAEA /* OriginalTwitterProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalTwitterProfile.swift; sourceTree = "<group>"; };
-		F5B985932BB8B860001EAAEA /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		F5B985952BB8B939001EAAEA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5B985992BB8C000001EAAEA /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		F5B9859B2BB8C42C001EAAEA /* ProfileHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
@@ -149,7 +147,7 @@
 		F5A7DEF92BB09EEC0092D436 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5A7DEF82BB09EEC0092D436 /* Market.app */,
+				F5A7DEF82BB09EEC0092D436 /* TwitterMarket.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +199,6 @@
 		F5B985A52BB8CE50001EAAEA /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				F5B985932BB8B860001EAAEA /* BlurView.swift */,
 				F5B9859B2BB8C42C001EAAEA /* ProfileHeader.swift */,
 				F5B9859D2BB8C852001EAAEA /* ProfileView.swift */,
 				F5B985992BB8C000001EAAEA /* TabButton.swift */,
@@ -218,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F5A7DEF72BB09EEB0092D436 /* Market */ = {
+		F5A7DEF72BB09EEB0092D436 /* TwitterMarket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "Market" */;
+			buildConfigurationList = F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "TwitterMarket" */;
 			buildPhases = (
 				F5A7DEF42BB09EEB0092D436 /* Sources */,
 				F5A7DEF52BB09EEB0092D436 /* Frameworks */,
@@ -230,9 +227,9 @@
 			);
 			dependencies = (
 			);
-			name = Market;
+			name = TwitterMarket;
 			productName = upwork;
-			productReference = F5A7DEF82BB09EEC0092D436 /* Market.app */;
+			productReference = F5A7DEF82BB09EEC0092D436 /* TwitterMarket.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "Market" */;
+			buildConfigurationList = F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "TwitterMarket" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -263,7 +260,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5A7DEF72BB09EEB0092D436 /* Market */,
+				F5A7DEF72BB09EEB0092D436 /* TwitterMarket */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +292,6 @@
 				F5B985B82BB9EA80001EAAEA /* OriginalTwitterListView.swift in Sources */,
 				F5B9859A2BB8C000001EAAEA /* TabButton.swift in Sources */,
 				F5B985A62BB8CE50001EAAEA /* TweetView.swift in Sources */,
-				F5B985942BB8B860001EAAEA /* BlurView.swift in Sources */,
 				F555A6612BB0B38D00B88DD5 /* Tab.swift in Sources */,
 				F5B9857F2BB89C06001EAAEA /* LinearInterpolation.swift in Sources */,
 				F5B9859C2BB8C42D001EAAEA /* ProfileHeader.swift in Sources */,
@@ -499,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "Market" */ = {
+		F5A7DEF32BB09EEB0092D436 /* Build configuration list for PBXProject "TwitterMarket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5A7DF1A2BB09EF30092D436 /* Debug */,
@@ -508,7 +504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "Market" */ = {
+		F5A7DF1C2BB09EF30092D436 /* Build configuration list for PBXNativeTarget "TwitterMarket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5A7DF1D2BB09EF30092D436 /* Debug */,

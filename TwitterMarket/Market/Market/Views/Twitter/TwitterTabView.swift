@@ -59,12 +59,11 @@ struct TwitterTabView: View {
                         case 0:
                             TwitterListView()
                                 .frame(width: geometry.size.width)
-                                .background (
+                                .background(
                                     GeometryReader { listGeometry in
                                         Color.clear
                                             .onAppear {
                                                 listHeight = listGeometry.size.height
-                                                //print("listGeometry.size: \(listGeometry.size)")
                                             }
                                     }
                                 )
@@ -72,7 +71,6 @@ struct TwitterTabView: View {
                             ComplexView()
                                 .frame(width: geometry.size.width, height: staticViewHeight)
                                 .offset(y: tabBarOffset < minDistance ? -tabBarOffset + minDistance : 0)
-                                //.read(offset: $tabBarOffset)
                             // Add more cases as needed for additional tabs
                         default:
                             Text("Tab \(index + 1)")
@@ -98,7 +96,7 @@ struct TwitterTabView: View {
                     Color.clear
                         .onChange(of: geo.frame(in: .global).minY) { newValue in
                             let currentOffset = newValue
-                            print("currentOffset: \(currentOffset)")
+                            //print("currentOffset: \(currentOffset)")
                         }
                 }
             )

@@ -37,7 +37,7 @@ extension View {
             )
     }
     
-    func read(offset: Binding<CGFloat>) -> some View {
+    func read(offset: Binding<CGFloat>, name: String) -> some View {
         self
             .background(
                 GeometryReader { geo in
@@ -50,7 +50,7 @@ extension View {
                             let diff = abs(offset.wrappedValue - newValue)
                             if diff > 1.0 {
                                 offset.wrappedValue = newValue
-                                //print("sticky offset: \(offset.wrappedValue)")
+                                print("\(name): \(offset.wrappedValue)")
                             }
                         }
                 }

@@ -38,5 +38,5 @@ struct TwitterProfile: View {
 
 #Preview {
     TwitterProfile()
-        //.preferredColorScheme(.dark)
+        .preferredColorScheme(.dark)
 }

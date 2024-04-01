@@ -30,7 +30,7 @@ struct TwitterTabBarView: View {
         .padding(.top, 30)
         .background(colorScheme == .dark ? Color.black : Color.white)
         .offset(y: tabBarOffset < minDistance ? -tabBarOffset + minDistance : 0)
-        .read(offset: $tabBarOffset)
+        .read(offset: $tabBarOffset, name: "tabBarOffset")
         .zIndex(1)
     }
 }
